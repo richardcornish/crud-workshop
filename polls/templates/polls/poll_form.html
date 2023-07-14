@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>{% if poll %}Update{% else %}Create{% endif %} poll</h1>
+
+<form method="post" action="{% if poll %}{% url 'poll_update' poll.pk %}{% else %}{% url 'poll_create' %}{% endif %}">
+	{% csrf_token %}
+	{{ form.as_p }}
+	<button type="submit">{% if poll %}Update{% else %}Create{% endif %}</button>
+</form>
+
+<p><a href="{% if poll %}{{ poll.get_absolute_url }}{% else %}{% url 'poll_list' %}{% endif %}">Cancel</a></p>
+
+{% endblock %}

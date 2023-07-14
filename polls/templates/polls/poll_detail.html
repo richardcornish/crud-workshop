@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>{{ poll }}</h1>
+
+<p><a href="{% url 'poll_update' object.pk %}">Update</a></p>
+
+<p><a href="{% url 'poll_delete' object.pk %}">Delete</a></p>
+
+<p><a href="{% url 'poll_list' %}">All polls</a></p>
+
+{% endblock %}
