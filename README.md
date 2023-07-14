@@ -11,7 +11,7 @@
 1. Clone the repository.
 
 ```
-git clone
+git clone https://github.com/richardcornish/crud-workshop.git
 ```
 
 2. Create and activate the virtual environment.
